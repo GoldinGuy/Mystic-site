@@ -41,6 +41,7 @@ function alt_img_url() {
 	// 			return art_crop;
 	// 		}
 	// 	};
+
 	return getRandomArt(1);
 }
 
