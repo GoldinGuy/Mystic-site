@@ -4,7 +4,7 @@ const TEMPLATE = $(function() {
 	$.getJSON("https://mystic-api-test.herokuapp.com/articles", function(items) {
 		let promises = items.map(item => {
 			return new Promise(resolve => {
-				if (item.image_url) {
+				if (item.image_url && a) {
 					let new_item = `
 <a class="card" href="${item.url}">
   <div class="image art-height">
@@ -24,7 +24,9 @@ const TEMPLATE = $(function() {
 </div >`;
 					resolve($(new_item));
 				} else {
-					$.getJSON("https://api.scryfall.com/cards/random").then(card => {
+					$.getJSON(
+						"https://api.scryfall.com/cards/random?q=legal:modern"
+					).then(card => {
 						let new_item = `
 <a class="card" href="${item.url}">
   <div class="image art-height">
