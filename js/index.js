@@ -4,29 +4,28 @@ const TEMPLATE = $(function() {
 	$.getJSON("https://mystic-api-test.herokuapp.com/articles", function(items) {
 		let promises = items.map(item => {
 			return new Promise(resolve => {
-				if (item.image_url && a) {
-					let new_item = `
-<a class="card" href="${item.url}">
-  <div class="image art-height">
-    <img src="${item.image_url}" />
-  </div >
-  <div class="content">
-    <div class="header">${item.title}</div>
-  </div>
-  <div class="extra content">
-    <span class="right floated">
-      ${moment.duration(moment(item.date).diff(new moment())).humanize()} ago
-      </span>
-    <span>
-      ${item.site_name}
-    </span>
-  </div>
-</div >`;
-					resolve($(new_item));
-				} else {
-					$.getJSON(
-						"https://api.scryfall.com/cards/random?q=legal:modern"
-					).then(card => {
+				// 				if (item.image_url && !item.image_url) {
+				// 					let new_item = `
+				// <a class="card" href="${item.url}">
+				//   <div class="image art-height">
+				//     <img src="${item.image_url}" />
+				//   </div >
+				//   <div class="content">
+				//     <div class="header">${item.title}</div>
+				//   </div>
+				//   <div class="extra content">
+				//     <span class="right floated">
+				//       ${moment.duration(moment(item.date).diff(new moment())).humanize()} ago
+				//       </span>
+				//     <span>
+				//       ${item.site_name}
+				//     </span>
+				//   </div>
+				// </div >`;
+				// 					resolve($(new_item));
+				// 				} else {
+				$.getJSON("https://api.scryfall.com/cards/random?q=legal:modern").then(
+					card => {
 						let new_item = `
 <a class="card" href="${item.url}">
   <div class="image art-height">
@@ -45,8 +44,9 @@ const TEMPLATE = $(function() {
   </div>
 </div >`;
 						resolve($(new_item));
-					});
-				}
+					}
+				);
+				// }
 			});
 		});
 
