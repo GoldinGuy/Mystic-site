@@ -1,4 +1,8 @@
 /*------------------------------------------------------------------
+colors
+31355a
+
+
 [TABLE OF CONTENTS]
 
 1. BASE
@@ -812,7 +816,9 @@ a[href^="tel"] {
 }
 
 .bg-dark {
-	background: #000 !important;
+	background: #191828 !important;
+	/* background: #191828 !important; */
+	/* background: #292931 !important; */
 }
 
 .dropdown-menu {
