@@ -1,58 +1,104 @@
-const TEMPLATE = $(function() {
-	let article_grid = $("#article-grid");
+let ap = document.getElementById("app");
 
-	$.getJSON("https://mystic-api-test.herokuapp.com/articles", function(items) {
-		let promises = items.map(item => {
-			return new Promise(resolve => {
-				// 				if (item.image_url && !item.image_url) {
-				// 					let new_item = `
-				// <a class="card" href="${item.url}">
-				//   <div class="image art-height">
-				//     <img src="${item.image_url}" />
-				//   </div >
-				//   <div class="content">
-				//     <div class="header">${item.title}</div>
-				//   </div>
-				//   <div class="extra content">
-				//     <span class="right floated">
-				//       ${moment.duration(moment(item.date).diff(new moment())).humanize()} ago
-				//       </span>
-				//     <span>
-				//       ${item.site_name}
-				//     </span>
-				//   </div>
-				// </div >`;
-				// 					resolve($(new_item));
-				// 				} else {
-				$.getJSON("https://api.scryfall.com/cards/random?q=legal:modern").then(
-					card => {
-						let new_item = `
-<a class="card" href="${item.url}">
-  <div class="image art-height">
-    <img src="${card.image_uris.art_crop} " />
-  </div >
-  <div class="content">
-    <div class="header">${item.title}</div>
-  </div>
-  <div class="extra content">
-    <span class="right floated">
-      ${moment.duration(moment(item.date).diff(new moment())).humanize()} ago
-      </span>
-    <span>
-      ${item.site_name}
-    </span>
-  </div>
-</div >`;
-						resolve($(new_item));
-					}
-				);
-				// }
-			});
-		});
+let state = { items: [], page: 0 };
 
-		Promise.all(promises).then(cards => article_grid.append(...cards));
+function updateArticles() {
+	m.request({
+		method: "GET",
+		url: `https://mystic-api-test.herokuapp.com/articles?page=${state.page}`
+	}).then(function(new_items) {
+		// prettier-ignore
+		state.items = new_items.map(i =>
+			m("a", { class: "card", href: i.url }, [
+				m("div", { class: "image" }, m("img", { src: i.image_url })),
+				m("div", { class: "content" },
+					m("div", { class: "header" }, i.title),
+					m("div", { class: "description" }, i.description)
+				),
+				m("div", { class: "extra content" },
+					m("span", { class: "right floated" },
+						moment.duration(moment(i.date).diff(new moment())).humanize() +
+						" ago"
+					),
+					m("span", "From " + i.site_name)
+				)
+			])
+		);
 	});
-});
+}
+
+var Articles = {
+	oninit: updateArticles,
+	view: function() {
+		// prettier-ignore
+		return [
+			m("div", { class: "ui center aligned container" }, [
+				m("button", {
+					class: "ui button",
+					onclick: function () {
+						state.page = Math.max(state.page - 1, 0);
+						updateArticles();
+					}
+				}, "Prev"),
+				m("button", {
+					class: "ui button",
+					onclick: () => {
+						state.page = 0;
+						updateArticles();
+					}
+				}, `Page ${state.page + 1}`),
+				m("button", {
+					class: "ui button",
+					onclick: function () {
+						state.page++;
+						updateArticles();
+					}
+				}, "Next")
+			]),
+			m("div", { class: "ui section divider" }),
+			m("div", { class: "ui link three cards" }, state.items)
+		];
+	}
+};
+
+m.mount(app, Articles);
+
+// const TEMPLATE = $(function() {
+// 	let article_grid = $("#article-grid");
+
+// 	$.getJSON("https://mystic-api-test.herokuapp.com/articles", function(items) {
+// 		$.getJSON(
+// 			"https://mystic-api-test.herokuapp.com/random_art?count=51",
+// 			function(random_imgs) {
+// 				for (let i = 0; i < items.length; i++) {
+// 					let new_item = `
+//         <a class="card" href="${items[i].url}">
+//           <div class="image art-height">
+//             <img src="${
+// 							items[i].image_url ? items[i].image_url : random_imgs[i]
+// 						}" />
+//           </div>
+//           <div class="content">
+//             <div class="header">${items[i].title}</div>
+//           </div>
+//           <div class="extra content">
+//             <span class="right floated">
+//               ${moment
+// 								.duration(moment(items[i].date).diff(new moment()))
+// 								.humanize()} ago
+//               </span>
+//             <span>
+//               ${items[i].site_name}
+//             </span>
+//           </div>
+//         </div >`;
+// 					article_grid.push($(new_item));
+// 					console.log([i]);
+// 				}
+// 			}
+// 		);
+// 	});
+// });
 
 // const TEMPLATE = $(function() {
 // 	let article_grid = $("#article-grid");
@@ -88,61 +134,3 @@ const TEMPLATE = $(function() {
 // 			.map($.getJSON)
 // 	).then(data => data.map(c => c.image_uris.art_crop));
 // }
-
-// function alt_img_url() {
-// $.getJSON("https://api.scryfall.com/cards/random"),
-// 	function(items) {
-// 		for (item of items) {
-// 			let art_crop = "${item.image_uris.art_crop}";
-// 			return art_crop;
-// 		}
-// 	};
-// }
-
-/* <img src="${item.image_url ? item.image_url : alt_img_url()} " /> */
-
-// item.img = card.art_crop;
-// if (item.image_url != null || item.image_url == '') {
-//   var url = item.image_url;
-//   return url;
-// } else {
-//   this.noImageCycleCounter++;
-//   if (this.noImageCycleCounter > this.noImageCycleMax) {
-//     this.noImageCycleCounter = 1;
-//   }
-//   var urlA = this.imageBaseURL + 'grid/grid' + this.noImageCycleCounter + '.JPG';
-//   item.image_url = urlA;
-//   return urlA;
-
-// var noImageCycleCounter = Math.floor(Math.random() * (94 - 1)) + 1;
-// var urlA = this.imageBaseURL + "/grid/grid" + noImageCycleCounter + ".JPG";
-// item.image_url = urlA;
-// item.image_url = item.image_uris.art_crop;
-// return urlA;
-
-// const TEMPLATE = $(function() {
-// 	let article_grid = $("#article-grid");
-
-// 	$.getJSON("https://mystic-api-test.herokuapp.com/articles", function(items) {
-// 		for (item of items) {
-// 			let new_item = `
-// <a class="card" href="${item.url}">
-//   <div class="image art-height">
-//     <img src="${item.image_url}" />
-//   </div>
-//   <div class="content">
-//     <div class="header">${item.title}</div>
-//   </div>
-//   <div class="extra content">
-//       <span class="right floated">
-//       ${moment.duration(moment(item.date).diff(new moment())).humanize()} ago
-//       </span>
-//       <span>
-//        ${item.site_name}
-//       </span>
-//     </div>
-// </div>`;
-// 			article_grid.append($(new_item));
-// 		}
-// 	});
-// });

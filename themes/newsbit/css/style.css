@@ -324,6 +324,12 @@ ul {
 	border: 1px solid #7044ff;
 }
 
+p .fs-11 {
+	font-size: 13px !important;
+	margin-bottom: 4px;
+	color: white;
+}
+
 hr {
 	background-color: #e7e7e7;
 	border: 0;
@@ -842,7 +848,7 @@ a[href^="tel"] {
 	background: #7044ff;
 	color: #fff;
 	display: inline-block;
-	font-size: 11px;
+	font-size: 16px;
 	padding: 5px 10px;
 	line-height: 100%;
 	text-transform: uppercase;
@@ -859,12 +865,17 @@ a[href^="tel"] {
 .trending-news-slider .post-title a {
 	color: #fff;
 	font-weight: 600;
+	font-size: 18px !important;
+}
+
+.trending {
+	font-size: 16px !important;
 }
 
 .trending-news-slider .post-title.title-sm {
 	font-weight: 400;
-	margin: 0;
-	font-size: 12px;
+	margin: 10;
+	font-size: 16px;
 	line-height: 20px;
 }
 
@@ -1057,7 +1068,7 @@ a.post-category.absolute {
 		padding: 8px;
 	}
 	.post-overlay-wrapper .post-content .post-title {
-		font-size: 15px;
+		font-size: 17px;
 		line-height: 20px;
 	}
 }
@@ -1891,7 +1902,7 @@ a.post-category.absolute {
 /* 7. POST CATEGORY STYLES
 ================================================== */
 .category-listing .post-block-wrapper .post-content p {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .subCategory > li {

@@ -857,6 +857,7 @@ a[href^="tel"] {
 
 .trending-news-slider .post-title a {
 	color: #fff;
+	font-size: 13px;
 	font-weight: 600;
 }
 
