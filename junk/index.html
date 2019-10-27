@@ -23,10 +23,6 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick-theme.css">
     <!-- manin stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="./js/index.js"></script>
-
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -48,13 +44,10 @@
       integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mithril/2.0.4/mithril.min.js"
-      integrity="sha256-8cl9GQUonfQFzoyXWdf5ZsGnUJ/FC8PE6E7E9U6JE30="
-      crossorigin="anonymous"
-    ></script>
-  </head>
- <body>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+
 <div class="trending-bar-dark hidden-xs">
     <div class="container">
         <div class="row">
@@ -64,26 +57,79 @@
                     <div class="item">
                         <div class="post-content">
                             <h2 class="post-title title-sm">
-                                <a href="#">Hogaak and Looting banned! Stoneforge spikes!</a>
+                                <a href="single-post.html">Hogaak and Looting banned! Stoneforge spikes!</a>
                             </h2>
                         </div>
                     </div>
                     <div class="item">
                         <div class="post-content">
                             <h2 class="post-title title-sm">
-                                <a href="#">Tron wins modern Grand Prix Vegas</a>
+                                <a href="single-post.html">Tron wins modern Grand Prix Vegas</a>
                             </h2>
                         </div>
                     </div>
                     <div class="item">
                         <div class="post-content">
                             <h2 class="post-title title-sm">
-                                <a href="#" >Throne of Eldraine Spoilers shock players.</a>
+                                <a href="single-post.html" >Throne of Eldraine Spoilers shock players.</a>
                             </h2>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12 top-nav-social-lists text-lg-right col-lg-4 ml-lg-auto">
+                <ul class="list-unstyled mt-4 mt-lg-0">
+                    <li>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-facebook-f"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-youtube"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-linkedin"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-pinterest-p"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="social-icon">
+                                <i class="fa fa-reddit-alien"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
 
         </div>
     </div>
@@ -96,7 +142,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/logos/mysticlogo4.png" alt="">
+                        <img src="images/logos/mysticlogo4.png" alt=""> <!-- Replace Logo Here -->
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -104,7 +150,7 @@
             <div class="col-xs-12 col-sm-9 col-md-9">
                 <div class="top-ad-banner float-right">
                     <a href="#">
-                       
+                        <!-- <img src="images/news/ad-pro.png" class="img-fluid" alt="banner-ads"> -->
                         <script id="tcg-a2"
     data-affcode="MysticMTG"
     data-width="728"
@@ -170,16 +216,15 @@
             </div>
         </div>
     </div>
-    <form class="site-search" method="get">
+    <!-- <form class="site-search" method="get">
         <input type="text" id="searchInput" name="site_search" placeholder="Search Articles Here..." autofocus="">
         <div class="search-close">
             <span class="close-search">
                 <i class="fa fa-times"></i>
             </span>
         </div>
-    </form>
+    </form> -->
 </div>
-
 
 <div class="py-30"></div>
 
@@ -270,8 +315,7 @@
 
 <section class="news-style-four bg-light section-padding">
 
-<br>
-<div class="container">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
 				<div class="news-style-one">
@@ -284,26 +328,102 @@
     </div>
     </div>
     <br>
-    <br>
-    <!-- <div class="ui container">
-      <div class="ui center aligned basic segment">
-        <h1>Articles</h1>
-      </div>
-    </div> -->
+<br>
+  <div class="ui container">
 
-    <!-- <div class="ui section divider"></div> -->
-
-     <div class="ui container">
-
+<!-- <div class="ui link three cards"  id="article-grid"></div> -->
       
       <div class="ui link three cards"  id="article-grid"></div>
 
     </div>
-    <!-- <div class="ui container" id="app"></div> -->
+</section>
 
-    <script src="./index.js"></script>
-  
-    	<!-- <nav aria-label="pagination-wrapper" class="pagination-wrapper">
+
+ <!-- <section class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+				<div class="all-news-block">
+    <h3 class="news-title">
+        <span>The Archives</span>
+    </h3>
+
+
+			<div class="all-news-block">
+    <h3 class="news-title">
+        <span>The Archives</span>
+    </h3>
+    <div class="all-news">
+        <div class="row">
+    <div id="twitch-embed"></div>
+
+
+        // width: 854,
+        width: 1154,
+        height: 480,
+        channel: "mtggoldfish"
+      });
+    </script>
+
+
+    <div class="all-news">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="post-block-wrapper post-float-half clearfix">
+                    <div class="post-thumbnail">
+                        <a href="single-post.html">
+                            <img class="img-fluid" src="images/news/news-01.jpg" alt="post-thumbnail"/>
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <a class="post-category" href="post-category-2.html">Card Previews
+                        </a>
+                        <h2 class="post-title mt-3">
+                            <a href="single-post.html">See the Latest Card Previews</a>
+                        </h2>
+                        <div class="post-meta">
+         
+                            <span class="post-author">
+                                <a href="author.html">On Scryfall</a>
+                            </span>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque, aliquid accusamus 
+                            soluta!...
+                        </p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-lg-6 col-md-6">
+                <div class="post-block-wrapper post-float-half clearfix">
+                   <div class="post-thumbnail">
+                        <a href="single-post.html">
+                            <img class="img-fluid" src="images/news/news-12.jpg" alt="post-thumbnail"/>
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <a class="post-category" href="post-category-2.html">Health</a>
+                        <h2 class="post-title mt-3">
+                            <a href="single-post.html">View the Latest Tournament Results</a>
+                        </h2>
+                        <div class="post-meta">
+                            <span class="posted-time">4 hours ago</span>
+                            <span class="post-author">by
+                                <a href="author.html">Rimmon Ronnick</a>
+                            </span>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis blanditiis hic 
+                            cumque excepturi...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<nav aria-label="pagination-wrapper" class="pagination-wrapper">
   <ul class="pagination justify-content-center">
     <li class="page-item active">
       <a class="page-link" href="#" aria-label="Previous">
@@ -321,10 +441,63 @@
       </a>
     </li>
   </ul>
-</nav>			
-<br>
-<br>	 -->
-</section>
+</nav>				
+			</div>
+			<div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+				<div class="sidebar sidebar-right">
+					<div class="widget">
+    <h3 class="news-title">
+        <span>Featured Creators</span>
+    </h3>
+    <div class="post-list-block">
+        <div class=" review-post-list">
+            <div class="top-author">
+                <img src="images/logos/tolarian.jpg" alt="author-thumb">
+                <div class="info">
+                    <h4 class="name"><a href="author.html">Tolarian Community College</a></h4>
+                    <ul class="list-unstyled">
+                        <!-- <li>37 Posts</li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="top-author">
+                <img src="images/logos/sbmtg.jpg" alt="author-thumb">
+                <div class="info">
+                    <h4 class="name"><a href="author.html">SBMTG</a></h4>
+                    <ul class="list-unstyled">
+                        <li>28 Posts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-author">
+                <img src="images/logos/rhystic.jpg" alt="author-thumb">
+                <div class="info">
+                    <h4 class="name"><a href="author.html">Rhystic Studies</a></h4>
+                    <ul class="list-unstyled">
+                        <li>19 Posts</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="top-author">
+                <img src="images/logos/commandzone.jpg" alt="author-thumb">
+                <div class="info">
+                    <h4 class="name"><a href="author.html">The Command Zone</a></h4>
+                    <ul class="list-unstyled">
+                        <!-- <li>18 Posts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<!-- <div class="py-40"></div> -->
+
 <footer class="footer footer-main ">
     <div class="container">
         <div class="row justify-content-center">
@@ -334,7 +507,14 @@
 <p class="mt-4 fs-11">The information presented on this site about Magic: The Gathering, both literal and graphical, is copyrighted by Wizards of the Coast (a subsidiary of Hasbro, Inc.).
 This website is not produced, endorsed, supported, or affiliated with Wizards of the Coast.</p>
                
-          
+                <!-- <ul class="list-inline footer-social">
+                    <li class="li list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="fa fa-facebook"></i></a></li>
+                    <li class="li list-inline-item"><a href="https://twitter.com/themefisher"><i class="fa fa-twitter"></i></a></li>
+                    <li class="li list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="li list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li class="li list-inline-item"><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li class="li list-inline-item"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul> -->
 
                 <div class="copyright-text text-center">
                     <p class="mb-0">© Copyright 2019 Reserved to - <a href="https://goldinwebdesign.com/" target="_blank">Goldin Web Design</a></p>
@@ -365,14 +545,5 @@ This website is not produced, endorsed, supported, or affiliated with Wizards of
 <!-- main js -->
 <script src="js/custom.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
