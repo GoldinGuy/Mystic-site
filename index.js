@@ -136,8 +136,7 @@ const TEMPLATE3 = $(function() {
      
                             <h2 class="slider-post-title">
                                 <a href="${"https://www.youtube.com/watch?v=" +
-																	items.items[0].snippet.resourceId
-																		.videoId}"">${
+																	items.items[0].snippet.resourceId.videoId}">${
 			items.items[0].snippet.title
 		}</a>
                             </h2>
@@ -157,13 +156,13 @@ const TEMPLATE3 = $(function() {
             <div class="col-md-6 col-xs-12 col-lg-4">
                  <div class="featured-slider mr-lg-3">
                     <div class="item" style="background-image:url(${
-											items.items[1].snippet.thumbnails.high.url
+											items.items[1].snippet.thumbnails.maxres.url
 										})">
                         <div class="post-content">
                             
                             <h2 class="slider-post-title">
                                 <a href="${"https://www.youtube.com/watch?v=" +
-																	items.items[0].snippet.resourceId.videoId}">${
+																	items.items[1].snippet.resourceId.videoId}">${
 			items.items[1].snippet.title
 		}</a>
                             </h2>
@@ -184,13 +183,13 @@ const TEMPLATE3 = $(function() {
                 <div class="row mt-3 mt-lg-0">
                     <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
                         <div class="post-featured-style" style="background-image:url(${
-													items.items[2].snippet.thumbnails.high.url
+													items.items[2].snippet.thumbnails.maxres.url
 												})">
                             <div class="post-content">
                     
                                 <h2 class="post-title">
                                     <a href="${"https://www.youtube.com/watch?v=" +
-																			items.items[0].snippet.resourceId
+																			items.items[2].snippet.resourceId
 																				.videoId}">${
 			items.items[2].snippet.title
 		}</a>
@@ -208,13 +207,13 @@ const TEMPLATE3 = $(function() {
                     </div>
                     <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
                         <div class="post-featured-style" style="background-image:url(${
-													items.items[3].snippet.thumbnails.high.url
+													items.items[3].snippet.thumbnails.maxres.url
 												})">
                             <div class="post-content">
                  
                                 <h2 class="post-title">
                                     <a href="${"https://www.youtube.com/watch?v=" +
-																			items.items[0].snippet.resourceId
+																			items.items[3].snippet.resourceId
 																				.videoId}">${
 			items.items[3].snippet.title
 		}</a>
