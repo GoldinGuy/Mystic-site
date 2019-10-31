@@ -1,120 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Mystic - Your Magic Resource</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-<head>
-    <meta charset="utf-8">
-    <title>Mystic - Your Magic Resource</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--Favicon-->
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="images/apple-touch-icon.png"
+		/>
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    
-    <!-- THEME CSS
+		<!-- THEME CSS
 	================================================== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-    <!-- Slick Carousel -->
-    <link rel="stylesheet" href="plugins/slick-carousel/slick.css">
-    <link rel="stylesheet" href="plugins/slick-carousel/slick-theme.css">
-    <!-- manin stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+		<!-- FontAwesome -->
+		<link
+			rel="stylesheet"
+			href="plugins/font-awesome/css/font-awesome.min.css"
+		/>
+		<!-- Slick Carousel -->
+		<link rel="stylesheet" href="plugins/slick-carousel/slick.css" />
+		<link rel="stylesheet" href="plugins/slick-carousel/slick-theme.css" />
+		<!-- manin stylesheet -->
+		<link rel="stylesheet" href="css/style.css" />
 
-    <!-- <script src="./js/index.js"></script> -->
+		<!-- <script src="./js/index.js"></script> -->
 
- <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-   <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-      integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q="
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
-      integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-      integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mithril/2.0.4/mithril.min.js"
-      integrity="sha256-8cl9GQUonfQFzoyXWdf5ZsGnUJ/FC8PE6E7E9U6JE30="
-      crossorigin="anonymous"
-    ></script>
-  </head>
- <body>
-<div class="trending-bar-dark hidden-xs">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3 class="trending-bar-title">Trending News</h3>
-                <div class="trending-news-slider">
-                    <div class="item">
-                        <div class="post-content">
-                            <h2 class="post-title title-sm">
-                                <a href="https://magic.wizards.com/en/articles/archive/news/big-things-are-coming-commander-2020-2019-10-30">Big things are coming for Commander in 2020</a>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="post-content">
-                            <h2 class="post-title title-sm">
-                                <a href="https://www.mtggoldfish.com/tournaments/all#paper">See the latest Magic tournament results</a>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="post-content">
-                            <h2 class="post-title title-sm">
-                                <a href="https://scryfall.com/sets/eld?order=spoiled" >View the latest Throne of Eldraine spoilers</a>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="post-content">
-                            <h2 class="post-title title-sm">
-                                <a href="https://magic.wizards.com/en/game-info/gameplay/formats/pioneer" >Players react to a new Magic format - Pioneer</a>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="plugins/slick/slick.css" />
+		<link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+			integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q="
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+			integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+			integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/mithril/2.0.4/mithril.min.js"
+			integrity="sha256-8cl9GQUonfQFzoyXWdf5ZsGnUJ/FC8PE6E7E9U6JE30="
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="trending-bar-dark hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<h3 class="trending-bar-title">Trending News</h3>
+						<div class="trending-news-slider">
+							<div class="item">
+								<div class="post-content">
+									<h2 class="post-title title-sm">
+										<a
+											href="https://magic.wizards.com/en/articles/archive/news/big-things-are-coming-commander-2020-2019-10-30"
+											>Big things are coming for Commander in 2020</a
+										>
+									</h2>
+								</div>
+							</div>
+							<div class="item">
+								<div class="post-content">
+									<h2 class="post-title title-sm">
+										<a href="https://www.mtggoldfish.com/tournaments/all#paper"
+											>See the latest Magic tournament results</a
+										>
+									</h2>
+								</div>
+							</div>
+							<div class="item">
+								<div class="post-content">
+									<h2 class="post-title title-sm">
+										<a href="https://scryfall.com/sets/eld?order=spoiled"
+											>View the latest Throne of Eldraine spoilers</a
+										>
+									</h2>
+								</div>
+							</div>
+							<div class="item">
+								<div class="post-content">
+									<h2 class="post-title title-sm">
+										<a
+											href="https://magic.wizards.com/en/game-info/gameplay/formats/pioneer"
+											>Players react to a new Magic format - Pioneer</a
+										>
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        </div>
-    </div>
-</div> 
+		<header class="header-navigation d-none d-lg-block">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-xs-12 col-sm-3 col-md-3">
+						<!-- Logo -->
+						<div class="logo">
+							<a href="index.html">
+								<img src="images/logos/mysticlogo4.png" alt="" />
+							</a>
+						</div>
+						<!-- End Logo -->
+					</div>
+					<div class="col-xs-12 col-sm-9 col-md-9">
+						<div class="top-ad-banner float-right">
+							<a
+								href="http://store.tcgplayer.com/massentry?partner=MysticMTG&utm_campaign=affiliate&utm_medium=MysticMTG&utm_source=MysticMTG"
+							>
+								<img src="images/tcg.jpg" alt="tcg"
+							/></a>
 
-<header class="header-navigation d-none d-lg-block">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logos/mysticlogo4.png" alt="">
-                    </a>
-                </div>
-                <!-- End Logo -->
-            </div>
-            <div class="col-xs-12 col-sm-9 col-md-9">
-                <div class="top-ad-banner float-right">
-                    <a href="http://store.tcgplayer.com/massentry?partner=MysticMTG&utm_campaign=affiliate&utm_medium=MysticMTG&utm_source=MysticMTG">
-                        <img src="images/tcg.jpg" alt="tcg"></a>
-                        <!-- <script id="tcg-a2"
+							<!-- <script id="tcg-a2"
     data-affcode="MysticMTG"
     data-width="728"
     data-height="90"
@@ -125,61 +147,66 @@
     src="https://content.tcg20life.com/tcgafa.js" async>
 </script>
                     </a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-<div class="main-navbar clearfix bg-dark ">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg site-main-nav navigation">
-                      <a class="navbar-brand d-lg-none" href="index.html">
-                        <img src="images/logos/mysticlogo.png" alt=""> 
-                     </a>
-  
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars"></span>
-                  </button>
+		<div class="main-navbar clearfix bg-dark ">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<nav class="navbar navbar-expand-lg site-main-nav navigation">
+							<a class="navbar-brand d-lg-none" href="index.html">
+								<img src="images/logos/mysticlogo.png" alt="" />
+							</a>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                           
-                            <li class="nav-item dropdown">
-                                  <a class="nav-link" href="index.html" >Home</a>
-                            </li>
-                           
-                             <li class="nav-item dropdown">
-                                 <a class="nav-link" href="#" >The Timmy</a>
-                            </li>
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-toggle="collapse"
+								data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent"
+								aria-expanded="false"
+								aria-label="Toggle navigation"
+							>
+								<span class="fa fa-bars"></span>
+							</button>
 
-                                         <li class="nav-item dropdown">
-                                 <a class="nav-link" href="#" >The Johnny</a>
-                            </li>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="index.html">Home</a>
+									</li>
 
-                                         <li class="nav-item dropdown">
-                                 <a class="nav-link" href="#" >The Spike</a>
-                            </li>
-                            
-                             <li class="nav-item dropdown">
-                                  <a class="nav-link" href="#">Account</a>
-                            </li>
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="#">The Timmy</a>
+									</li>
 
-                        </ul>
-                        <!-- <div class="nav-search ml-auto d-none d-lg-block">
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="#">The Johnny</a>
+									</li>
+
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="#">The Spike</a>
+									</li>
+
+									<li class="nav-item dropdown">
+										<a class="nav-link" href="#">Account</a>
+									</li>
+								</ul>
+								<!-- <div class="nav-search ml-auto d-none d-lg-block">
                             <span id="search">
                                 <i class="fa fa-search"></i>
                             </span>
                         </div> -->
-                    </div>
-                </nav>
-                
-            </div>
-        </div>
-    </div>
-    <!-- <form class="site-search" method="get">
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- <form class="site-search" method="get">
         <input type="text" id="searchInput" name="site_search" placeholder="Search Articles Here..." autofocus="">
         <div class="search-close">
             <span class="close-search">
@@ -187,18 +214,19 @@
             </span>
         </div>
     </form> -->
-</div>
+		</div>
 
+		<div class="py-30"></div>
 
-<div class="py-30"></div>
-
-<section class="featured-posts" style="background-image:url(images/chandra.png)">
-
-        <!-- <div class="container">
+		<section
+			class="featured-posts"
+			style="background-image:url(images/chandra.png)"
+		>
+			<!-- <div class="container">
         <div class="row no-gutters">
             <div class="col-md-6 col-xs-12 col-lg-4"> -->
-              <!-- Promo Video -->
-<!-- <section class="promo-video">
+			<!-- Promo Video -->
+			<!-- <section class="promo-video">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -214,12 +242,11 @@
         </div>
     </div>
 </section> -->
-    <div class=""  id="video-grid">
-        </div>
-    
-    <!-- </div> -->
+			<div class="" id="video-grid"></div>
 
-    <!-- <div class="container">
+			<!-- </div> -->
+
+			<!-- <div class="container">
         <div class="row no-gutters">
             <div class="col-md-6 col-xs-12 col-lg-4">
                 <div class="featured-slider mr-md-3 mr-lg-3">
@@ -299,51 +326,44 @@
                     </div>
                 </div>
             </div>  -->
-        </div>
-    </div>
-</section>
-<div class="bg-light">
-<section class="news-style-four section-padding">
-
-<br>
-<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-				<div class="news-style-one">
-    <h3 class="news-title">
-        <span>Latest in Magic</span>
-    </h3>
-  
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- <br>
+		</section>
+		<div class="bg-light">
+			<section class="news-style-four section-padding">
+				<br />
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+							<div class="news-style-one">
+								<h3 class="news-title">
+									<span>Latest in Magic</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <br>
     <br> -->
-    <!-- <div class="ui container">
+				<!-- <div class="ui container">
       <div class="ui center aligned basic segment">
         <h1>Articles</h1>
       </div>
     </div> -->
 
-    <!-- <div class="ui section divider"></div> -->
-</section>
+				<!-- <div class="ui section divider"></div> -->
+			</section>
 
-     <div class="ui container">
+			<div class="ui container">
+				<!-- <div class="ui link three cards"  id="article-grid"></div> -->
 
-      <!-- <div class="ui link three cards"  id="article-grid"></div> -->
-      
-      
-      <div class="ui link three stackable cards"  id="article-grid"></div>
-
-    </div>
-    <!-- <div class="ui container" id="app"></div> -->
-<br>
-<br>
-<br>
-    <script src="./index.js"></script>
-  </div>
-    	<!-- <nav aria-label="pagination-wrapper" class="pagination-wrapper">
+				<div class="ui link three stackable cards" id="article-grid"></div>
+			</div>
+			<!-- <div class="ui container" id="app"></div> -->
+			<br />
+			<br />
+			<br />
+			<script src="./index.js"></script>
+		</div>
+		<!-- <nav aria-label="pagination-wrapper" class="pagination-wrapper">
   <ul class="pagination justify-content-center">
     <li class="page-item active">
       <a class="page-link" href="#" aria-label="Previous">
@@ -364,58 +384,79 @@
 </nav>			
 <br>
 <br>	 -->
-<footer class="footer footer-main ">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-sm-12 col-lg-6 text-center">
-                <a href="index.html"><img src="images/logos/mysticlogo.png" alt="" class="img-fluid"></a>
-                <p class="mt-4">We aim to provide a centralized location for Magic content. We want to support content creators and give users an amazing experience.</p>
-<p class="mt-4 fs-11">The information presented on this site about Magic: The Gathering, both literal and graphical, is copyrighted by Wizards of the Coast (a subsidiary of Hasbro, Inc.).
-This website is not produced, endorsed, supported, or affiliated with Wizards of the Coast.</p>
-               
-          
+		<section class="news-style-four section-padding">
+			<br />
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+						<div class="news-style-one">
+							<h3 class="news-title">
+								<span>Featured Videos</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<br />
+			<div class="" id="video-grid2"></div>
+		</section>
 
-                <div class="copyright-text text-center">
-                    <p class="mb-0">© Copyright 2019 Reserved to - <a href="https://goldinwebdesign.com/" target="_blank">Goldin Web Design</a></p>
-                </div>
-            </div>
+		<footer class="footer footer-main ">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8 col-sm-12 col-lg-6 text-center">
+						<a href="index.html"
+							><img src="images/logos/mysticlogo.png" alt="" class="img-fluid"
+						/></a>
+						<p class="mt-4">
+							We aim to provide a centralized location for Magic content. We
+							want to support content creators and give users an amazing
+							experience.
+						</p>
+						<p class="mt-4 fs-11">
+							The information presented on this site about Magic: The Gathering,
+							both literal and graphical, is copyrighted by Wizards of the Coast
+							(a subsidiary of Hasbro, Inc.). This website is not produced,
+							endorsed, supported, or affiliated with Wizards of the Coast.
+						</p>
 
-            <div class="scroll-to-top">
-                <button class="btn btn-primary" title="Back to Top">
-                    <i class="fa fa-angle-up"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+						<div class="copyright-text text-center">
+							<p class="mb-0">
+								© Copyright 2019 Reserved to -
+								<a href="https://goldinwebdesign.com/" target="_blank"
+									>Goldin Web Design</a
+								>
+							</p>
+						</div>
+					</div>
 
+					<div class="scroll-to-top">
+						<button class="btn btn-primary" title="Back to Top">
+							<i class="fa fa-angle-up"></i>
+						</button>
+					</div>
+				</div>
+			</div>
 
-
-<!-- THEME JAVASCRIPT FILES
+			<!-- THEME JAVASCRIPT FILES
 ================================================== -->
-<!-- initialize jQuery Library -->
-<script src="plugins/jquery/jquery.js"></script>
+			<!-- initialize jQuery Library -->
+			<script src="plugins/jquery/jquery.js"></script>
 
-<script src="plugins/slick/slick.min.js"></script>
-<!-- FancyBox -->
-<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-<!-- Bootstrap jQuery -->
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<!-- Slick Slider -->
-<script src="plugins/slick-carousel/slick.min.js"></script>
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-<script src="plugins/google-map/gmap.js"></script>
-<!-- main js -->
-<script src="js/custom.js"></script>
-
-</footer>
-
-
-
-
-
-
-
-
-
-
+			<script src="plugins/slick/slick.min.js"></script>
+			<!-- FancyBox -->
+			<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+			<!-- Bootstrap jQuery -->
+			<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+			<!-- Slick Slider -->
+			<script src="plugins/slick-carousel/slick.min.js"></script>
+			<!-- Google Map -->
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+			<script src="plugins/google-map/gmap.js"></script>
+			<!-- main js -->
+			<script src="js/custom.js"></script>
+		</footer>
+	</body>
+</html>

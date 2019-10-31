@@ -249,6 +249,190 @@ function vidImg(items, x) {
 	}
 }
 
+const TEMPLATE4 = $(function() {
+	let video_grid2 = $("#video-grid2");
+	$.getJSON("https://mystic-api-test.herokuapp.com/videos", function(items) {
+		let new_video = `<div class="container">
+        <div class="row no-gutters">
+
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-4">
+                <div class="row mt-3 mt-lg-0">
+                    <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													4
+												)})">
+                            <div class="post-content">
+                    
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[4].snippet.resourceId
+																				.videoId}">${
+			items.items[4].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                             <a href="${"https://www.youtube.com/watch?v=" +
+																								items.items[4].snippet
+																									.resourceId
+																									.videoId}" class="post-cat bg-success">${
+			items.items[4].snippet.channelTitle
+		}</a>
+                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													5
+												)})">
+                            <div class="post-content">
+                 
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[5].snippet.resourceId
+																				.videoId}">${
+			items.items[5].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                                   <a href="${"https://www.youtube.com/watch?v=" +
+																											items.items[5].snippet
+																												.resourceId
+																												.videoId}" class="post-cat bg-info">${
+			items.items[5].snippet.channelTitle
+		}</a>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+<div class="col-md-12 col-xs-12 col-sm-12 col-lg-4 ">
+                <div class="row mt-3 mt-lg-0">
+                    <div class="col-lg-12 bottom-video-border col-xs-12 col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													6
+												)})">
+                            <div class="post-content">
+                    
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[6].snippet.resourceId
+																				.videoId}">${
+			items.items[6].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                             <a href="${"https://www.youtube.com/watch?v=" +
+																								items.items[6].snippet
+																									.resourceId
+																									.videoId}" class="post-cat bg-success">${
+			items.items[6].snippet.channelTitle
+		}</a>
+                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bottom-video-border col-xs-12  col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													7
+												)})">
+                            <div class="post-content">
+                 
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[7].snippet.resourceId
+																				.videoId}">${
+			items.items[7].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                                   <a href="${"https://www.youtube.com/watch?v=" +
+																											items.items[7].snippet
+																												.resourceId
+																												.videoId}" class="post-cat bg-info">${
+			items.items[7].snippet.channelTitle
+		}</a>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+
+
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-4 ">
+                <div class="row mt-3 mt-lg-0">
+                    <div class="col-lg-12 bottom-video-border2 col-xs-12 col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													8
+												)})">
+                            <div class="post-content">
+                    
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[8].snippet.resourceId
+																				.videoId}">${
+			items.items[8].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                             <a href="${"https://www.youtube.com/watch?v=" +
+																								items.items[8].snippet
+																									.resourceId
+																									.videoId}" class="post-cat bg-success">${
+			items.items[8].snippet.channelTitle
+		}</a>
+                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bottom-video-border2 col-xs-12  col-sm-6 col-md-6">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													9
+												)})">
+                            <div class="post-content">
+                 
+                                <h2 class="post-title">
+                                    <a href="${"https://www.youtube.com/watch?v=" +
+																			items.items[9].snippet.resourceId
+																				.videoId}">${
+			items.items[9].snippet.title
+		}</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                                   <a href="${"https://www.youtube.com/watch?v=" +
+																											items.items[9].snippet
+																												.resourceId
+																												.videoId}" class="post-cat bg-info">${
+			items.items[9].snippet.channelTitle
+		}</a>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+</div>
+<div>
+            `;
+		video_grid2.append($(new_video));
+	});
+});
+
 // const TEMPLATE3 = $(function () {
 //   let video_grid = $("#video-grid");
 //   $.getJSON("https://mystic-api-test.herokuapp.com/videos", function (items) {
