@@ -301,7 +301,7 @@ const TEMPLATE4 = $(function() {
                                                    <a href="${"https://www.youtube.com/watch?v=" +
 																											items.items[5].snippet
 																												.resourceId
-																												.videoId}" class="post-cat bg-info">${
+																												.videoId}" class="post-cat bg-danger">${
 			items.items[5].snippet.channelTitle
 		}</a>
                               
@@ -331,7 +331,7 @@ const TEMPLATE4 = $(function() {
                                              <a href="${"https://www.youtube.com/watch?v=" +
 																								items.items[6].snippet
 																									.resourceId
-																									.videoId}" class="post-cat bg-success">${
+																									.videoId}" class="post-cat bg-info">${
 			items.items[6].snippet.channelTitle
 		}</a>
                            
@@ -357,7 +357,7 @@ const TEMPLATE4 = $(function() {
                                                    <a href="${"https://www.youtube.com/watch?v=" +
 																											items.items[7].snippet
 																												.resourceId
-																												.videoId}" class="post-cat bg-info">${
+																												.videoId}" class="post-cat bg-primary">${
 			items.items[7].snippet.channelTitle
 		}</a>
                               
@@ -390,7 +390,7 @@ const TEMPLATE4 = $(function() {
                                              <a href="${"https://www.youtube.com/watch?v=" +
 																								items.items[8].snippet
 																									.resourceId
-																									.videoId}" class="post-cat bg-success">${
+																									.videoId}" class="post-cat bg-danger">${
 			items.items[8].snippet.channelTitle
 		}</a>
                            
@@ -416,7 +416,7 @@ const TEMPLATE4 = $(function() {
                                                    <a href="${"https://www.youtube.com/watch?v=" +
 																											items.items[9].snippet
 																												.resourceId
-																												.videoId}" class="post-cat bg-info">${
+																												.videoId}" class="post-cat bg-success">${
 			items.items[9].snippet.channelTitle
 		}</a>
                               
