@@ -129,9 +129,10 @@ const TEMPLATE3 = $(function() {
         <div class="row no-gutters">
             <div class="col-md-6 col-xs-12 col-lg-4">
                 <div class="featured-slider mr-md-3 mr-lg-3">
-                    <div class="item" style="background-image:url(${
-											items.items[0].snippet.thumbnails.high.url
-										})">
+                    <div class="item" style="background-image:url(${vidImg(
+											items,
+											0
+										)})">
                         <div class="post-content" >
      
                             <h2 class="slider-post-title">
@@ -155,9 +156,10 @@ const TEMPLATE3 = $(function() {
 
             <div class="col-md-6 col-xs-12 col-lg-4">
                  <div class="featured-slider mr-lg-3">
-                    <div class="item" style="background-image:url(${
-											items.items[1].snippet.thumbnails.maxres.url
-										})">
+                    <div class="item" style="background-image:url(${vidImg(
+											items,
+											1
+										)})">
                         <div class="post-content">
                             
                             <h2 class="slider-post-title">
@@ -182,9 +184,10 @@ const TEMPLATE3 = $(function() {
             <div class="col-md-12 col-xs-12 col-sm-12 col-lg-4">
                 <div class="row mt-3 mt-lg-0">
                     <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
-                        <div class="post-featured-style" style="background-image:url(${
-													items.items[2].snippet.thumbnails.maxres.url
-												})">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													2
+												)})">
                             <div class="post-content">
                     
                                 <h2 class="post-title">
@@ -206,9 +209,10 @@ const TEMPLATE3 = $(function() {
                         </div>
                     </div>
                     <div class="col-lg-12 col-xs-12 col-sm-6 col-md-6">
-                        <div class="post-featured-style" style="background-image:url(${
-													items.items[3].snippet.thumbnails.maxres.url
-												})">
+                        <div class="post-featured-style" style="background-image:url(${vidImg(
+													items,
+													3
+												)})">
                             <div class="post-content">
                  
                                 <h2 class="post-title">
@@ -234,6 +238,14 @@ const TEMPLATE3 = $(function() {
 		video_grid.append($(new_video));
 	});
 });
+
+function vidImg(items, x) {
+	if (items.items[x].snippet.thumbnails.maxres != null) {
+		return items.items[x].snippet.thumbnails.maxres.url;
+	} else {
+		return items.items[x].snippet.thumbnails.high.url;
+	}
+}
 
 // const TEMPLATE3 = $(function () {
 //   let video_grid = $("#video-grid");
