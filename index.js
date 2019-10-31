@@ -169,9 +169,9 @@ const TEMPLATE3 = $(function() {
 		}</a>
                             </h2>
                             <div class="post-meta mt-2">
-                               <a href="${
-																	items.items[1].url
-																}" class="post-cat bg-danger">${
+                               <a href="${"https://www.youtube.com/watch?v=" +
+																	items.items[1].snippet.resourceId
+																		.videoId}" class="post-cat bg-danger">${
 			items.items[1].snippet.channelTitle
 		}</a>
                          
@@ -198,9 +198,10 @@ const TEMPLATE3 = $(function() {
 		}</a>
                                 </h2>
                                 <div class="post-meta mt-2">
-                                             <a href="${
-																								items.items[2].url
-																							}" class="post-cat bg-success">${
+                                             <a href="${"https://www.youtube.com/watch?v=" +
+																								items.items[2].snippet
+																									.resourceId
+																									.videoId}" class="post-cat bg-success">${
 			items.items[2].snippet.channelTitle
 		}</a>
                            
@@ -223,9 +224,10 @@ const TEMPLATE3 = $(function() {
 		}</a>
                                 </h2>
                                 <div class="post-meta mt-2">
-                                                   <a href="${
-																											items.items[3].url
-																										}" class="post-cat bg-info">${
+                                                   <a href="${"https://www.youtube.com/watch?v=" +
+																											items.items[3].snippet
+																												.resourceId
+																												.videoId}" class="post-cat bg-info">${
 			items.items[3].snippet.channelTitle
 		}</a>
                               
